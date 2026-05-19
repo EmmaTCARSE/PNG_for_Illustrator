@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>白背景透過PNG変換</title>
+  <title>Change</title>
   <style>
     :root { color-scheme: light dark; }
     body {
@@ -36,33 +36,33 @@
   </style>
 </head>
 <body>
-  <h1>画像を2値化して白背景を透過PNG化</h1>
-  <p class="hint">外部ツール不要。画像を読み込み、しきい値で白黒2値化し、白を透明にしたPNGを保存できます。</p>
+  <h1>PNG</h1>
+  <p class="hint">You can save the file.</p>
 
   <div class="controls">
     <div>
-      <label for="imageInput">画像ファイル</label><br />
+      <label for="imageInput">PhotoFile</label><br />
       <input id="imageInput" type="file" accept="image/*" />
     </div>
 
     <div>
-      <label for="threshold">しきい値: <span id="thresholdValue">180</span></label><br />
+      <label for="threshold">Number: <span id="thresholdValue">180</span></label><br />
       <input id="threshold" type="range" min="0" max="255" value="180" />
     </div>
 
     <div class="row">
-      <button id="convertButton" type="button" disabled>変換する</button>
-      <a id="downloadLink" download="converted.png" style="display:none;">PNGをダウンロード</a>
+      <button id="convertButton" type="button" disabled>Alter</button>
+      <a id="downloadLink" download="converted.png" style="display:none;">Download</a>
     </div>
   </div>
 
   <div class="preview">
     <div>
-      <h2>元画像</h2>
+      <h2>Previous</h2>
       <canvas id="sourceCanvas"></canvas>
     </div>
     <div>
-      <h2>変換後（白透過）</h2>
+      <h2>After</h2>
       <canvas id="resultCanvas"></canvas>
     </div>
   </div>
@@ -145,7 +145,7 @@
       return new Promise((resolve, reject) => {
         const img = new Image();
         img.onload = () => resolve(img);
-        img.onerror = () => reject(new Error('画像の読み込みに失敗しました'));
+        img.onerror = () => reject(new Error('Faild'));
         img.src = url;
       });
     }
